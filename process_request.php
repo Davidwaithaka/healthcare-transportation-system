@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $phone = htmlspecialchars($_POST['phone']);
     $location = htmlspecialchars($_POST['location']);
-    $patient = htmlspecialchars($_POST['patient']);
+    $Patient = htmlspecialchars($_POST['Patient']);
 
     $stmt = $conn->prepare("INSERT INTO requests (name, phone, location, patient) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $name, $phone, $location, $patient);
